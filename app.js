@@ -53,9 +53,7 @@ var budgetController = (function() {
          testing: function() {
             console.log(data);
          }
-
      };
-
 })();
 
 var UIController = (function() {
@@ -77,7 +75,43 @@ var UIController = (function() {
         },
         getDOMstrings: function() {
             return DOMstrings;
+        },
+        addListItem: function(obj, type) {
+            var html, newHtml;
+            // Create HTML string with placeholder text
+            if (type === 'inc') {
+                html = '<div class="item clearfix" id="income-%id%">' +
+                            '<div class="item__description">%description%</div>' +
+                            '<div class="right clearfix">' +
+                                '<div class="item__value">%value%</div>' +
+                                '<div class="item__delete">' +
+                                    '<button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+            } else if (type === 'exp') {
+                html = '<div class="item clearfix" id="expense-%id%">' +
+                            '<div class="item__description">%description%</div>' +
+                            '<div class="right clearfix">' +
+                                '<div class="item__value">%value%</div>' +
+                                '<div class="item__percentage">21%</div>' +
+                                '<div class="item__delete">' +
+                                    '<button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+            }
+
+            // Replace the placeholder text with some actual data
+            newHtml = html.replace('%id%', obj.id);
+            newHtml = newHtml.replace('%description%', obj.description);
+            newHtml = newHtml.replace('%value%', obj.value);
+
+            // Insert the HTML into the DOM
+            
         }
+
+
     };
 
 })();
