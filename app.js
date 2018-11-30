@@ -92,7 +92,6 @@ var budgetController = (function(){
             } else {
                 data.percentage = -1;
             }
-
         },
 
         getBudget: function() {
@@ -103,7 +102,7 @@ var budgetController = (function(){
                 percentage: data.percentage
             };
         },
-
+        // initial test
         testing: function(){
             console.log(data)
         }
