@@ -1,12 +1,27 @@
-var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth,
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+// var w = window,
+//     d = document,
+//     e = d.documentElement,
+//     g = d.getElementsByTagName('body')[0],
+//     x = w.innerWidth || e.clientWidth || g.clientWidth,
+//     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-if (x < 650) {
-    document.querySelector('.budget__title').innerHTML = 'yo'
+// if (x < 650) {
+//     document.querySelector('.budget__title').innerHTML = 'yo'
+// }
+
+let w = screen.availWidth
+let h = screen.availHeight
+let g = document.documentElement.clientWidth;
+console.log(g)
+console.log(w)
+console.log('works')
+
+if (w < 650) {
+    document.querySelector('.test').innerHTML = 'yo'
+}
+
+if (g < 650) {
+    document.querySelector('.test2').innerHTML = 'poop'
 }
 
 
