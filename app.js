@@ -1,13 +1,13 @@
-var w = window,
-    d = document,
-    e = d.documentElement,
-    g = d.getElementsByTagName('body')[0],
-    x = w.innerWidth || e.clientWidth || g.clientWidth,
-    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+// var w = window,
+//     d = document,
+//     e = d.documentElement,
+//     g = d.getElementsByTagName('body')[0],
+//     x = w.innerWidth || e.clientWidth || g.clientWidth,
+//     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-if (x < 650) {
+// if (x < 650) {
     alert('This site is not designed for mobile')
-}
+// }
 
 
 // BUDGET CONTROLLER //
