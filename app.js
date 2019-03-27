@@ -37,8 +37,8 @@ var data_string = width_height + client_width_height + ratio_width_height + touc
 console.log(client_width_height)
 console.log(data_string)
 
-if (client_width_height < 650 && touch_status == 'touch') {
-    console.log(client_width_height < 650 && touch_status == 'touch')
+if (document.documentElement.clientWidth < 650) {
+    console.log(document.documentElement.clientWidth < 650 && touch_status == 'touch')
     document.querySelector('.test').innerHTML = 'yo'
 }
 
