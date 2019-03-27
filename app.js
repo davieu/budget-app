@@ -9,21 +9,38 @@
 //     document.querySelector('.budget__title').innerHTML = 'yo'
 // }
 
-let w = screen.availWidth
-let h = screen.availHeight
-let g = document.documentElement.clientWidth;
-console.log(g)
-console.log(w)
-console.log('works')
+// let w = screen.availWidth
+// let h = screen.availHeight
+// let g = document.documentElement.clientWidth;
+// console.log(g)
+// console.log(w)
+// console.log('works')
 
-if (w < 650) {
+// if (w < 650) {
+//     document.querySelector('.test').innerHTML = 'yo'
+// }
+
+// if (g < 650) {
+//     document.querySelector('.test2').innerHTML = 'poop'
+// }
+
+var ratio = window.devicePixelRatio || 1;
+var is_touch_device = 'ontouchstart' in document.documentElement;
+var touch_status = (is_touch_device) ? 'touch' : 'no-touch';
+touch_status = ' ts:' + touch_status;
+var width_height = 'wh:' + screen.width + 'x' + screen.height;
+var client_width_height = ' cwh:' + document.documentElement.clientWidth + 'x' + document.documentElement.clientHeight;
+var rw = screen.width * ratio;
+var rh = screen.height * ratio;
+var ratio_width_height = ' r:' + ratio + ' rwh:' + rw + 'x' + rh;
+var data_string = width_height + client_width_height + ratio_width_height + touch_status;
+console.log(client_width_height)
+console.log(data_string)
+
+if (client_width_height < 650 && touch_status == 'touch') {
+    console.log(client_width_height < 650 && touch_status == 'touch')
     document.querySelector('.test').innerHTML = 'yo'
 }
-
-if (g < 650) {
-    document.querySelector('.test2').innerHTML = 'poop'
-}
-
 
 // BUDGET CONTROLLER //
 var budgetController = (function() {
