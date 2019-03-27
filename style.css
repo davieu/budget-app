@@ -259,7 +259,7 @@ h2 {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 655px) {
     .item__delete--btn:focus { outline: none; }
     .item__delete--btn:active { transform: translateY(2px); }
     
